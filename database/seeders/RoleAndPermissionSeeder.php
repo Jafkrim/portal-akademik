@@ -17,14 +17,21 @@ class RoleAndPermissionSeeder extends Seeder
         // 2. Membuat peran (role)
         $roleAdmin = Role::firstOrCreate(['name' => 'admin']);
         $roleStaf = Role::firstOrCreate(['name' => 'staf']);
+        $roleMahasiswa = Role::firstOrCreate(['name' => 'mahasiswa']); // Tambahan role mahasiswa
 
         // 3. Menautkan izin ke peran Admin
         $roleAdmin->givePermissionTo($permHapus);
 
         // 4. Menugaskan peran Admin ke akun dosenpbkk@its.ac.id
-        $user = User::where('email', 'dosenpbkk@its.ac.id')->first();
-        if ($user) {
-            $user->assignRole('admin');
+        $userAdmin = User::where('email', 'dosenpbkk@its.ac.id')->first();
+        if ($userAdmin) {
+            $userAdmin->assignRole('admin');
+        }
+
+        // 5. Menugaskan peran Mahasiswa ke akun mahasiswapbkk@its.ac.id
+        $userMhs = User::where('email', 'mahasiswapbkk@its.ac.id')->first();
+        if ($userMhs) {
+            $userMhs->assignRole('mahasiswa');
         }
     }
 }
