@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
         // 2. Membuat akun statis mahasiswa
         $mahasiswaStatis = User::factory()->create([
             'name' => "Ja'far Balyan Al Karim",
-            'email' => 'mahasiswapbkk@its.ac.id',
+            'email' => 'mahasiswapbkk@student.its.ac.id',
             'nrp' => '5025241040',
             'password' => Hash::make('password'),
             'role' => 'mahasiswa',

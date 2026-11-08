@@ -63,5 +63,5 @@ Akses aplikasi melalui browser pada alamat: http://127.0.0.1:8000
   - Password: password
 
 - **Mahasiswa:**
-  - Email: mahasiswapbkk@its.ac.id
+  - Email: mahasiswapbkk@student.its.ac.id
   - Password: password
