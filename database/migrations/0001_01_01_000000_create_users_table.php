@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('nrp')->nullable(); // Kolom NRP
+            $table->string('role')->default('mahasiswa'); // Kolom Role
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
